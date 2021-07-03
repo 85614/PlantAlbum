@@ -65,43 +65,29 @@ public class DetailActivity extends CallbackAppCompatActivity {
 //                .into(sportsImage);
 
         final String queryString =  getIntent().getStringExtra("image_url");
-        // Check the status of the network connection.
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = null;
-        if (connMgr != null) {
-            networkInfo = connMgr.getActiveNetworkInfo();
-        }
 
-        // If the network is available, connected, and the search field
-        // is not empty, start a BookLoader AsyncTask.
-        if (networkInfo != null && networkInfo.isConnected()
-                && queryString.length() != 0) {
-            Log.d("DEBUG", "network ok!");
-            Bundle queryBundle = new Bundle();
-            final Context c =  this;
-            getSupportLoaderManager().restartLoader(0, queryBundle, new MyCallBack(this, new Supplier<Function<Object, Object>>() {
-                @RequiresApi(api = Build.VERSION_CODES.N)
+        final Plant currentPlant = Plant.plants.get(queryString);
+        if (currentPlant.bitmap!=null) {
+            sportsImage.setImageBitmap(currentPlant.bitmap);
+        }
+        else {
+            this.call(this, new Supplier<Function<Object, Object>>() {
                 @Override
                 public Function<Object, Object> get() {
-                    Bitmap bitmap = null;
-                    try {
-                        bitmap = BitmapFactory.decodeStream(new URL(queryString).openStream());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    final Bitmap finalBitmap = bitmap;
+                    currentPlant.fetchImage();
                     return new Function<Object, Object>(){
                         @Override
                         public Object apply(Object o) {
-                            if (finalBitmap !=null)
-                                sportsImage.setImageBitmap(finalBitmap);
+                            if (currentPlant.bitmap!=null){
+                                sportsImage.setImageBitmap(currentPlant.bitmap);
+                            }
                             return o;
                         }
                     };
 
                 }
-            }));
+            });
         }
+
     }
 }

@@ -36,7 +36,7 @@ class Plant {
 
     int position;
     public Bitmap bitmap;
-    public static Map<String, Plant> sports = new HashMap<String, Plant>();
+    public static Map<String, Plant> plants = new HashMap<String, Plant>();
     /**
      * Constructor for the Sport data model.
      *
@@ -47,6 +47,7 @@ class Plant {
         this.name = name;
         this.imageURL = imageURL;
         this.imageResource = imageResource;
+        plants.put(imageURL, this);
     }
 
     /**
