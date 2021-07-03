@@ -21,13 +21,13 @@ import java.util.function.Supplier;
 class MyCallBack implements LoaderManager.LoaderCallbacks<Function<Object, Object>> {
     final private Supplier<Function<Object, Object>> task;
     Context context;
+
     MyCallBack(Context context, Supplier<Function<Object, Object>> task) {
         this.task = task;
         this.context = context;
     }
 
-    public static void call(AppCompatActivity context, Supplier<Function<Object, Object>> task)
-    {
+    public static void call(AppCompatActivity context, Supplier<Function<Object, Object>> task) {
         ConnectivityManager connMgr = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = null;
@@ -86,27 +86,14 @@ class MyCallBack implements LoaderManager.LoaderCallbacks<Function<Object, Objec
 }
 
 
-abstract class CallbackAppCompatActivity extends AppCompatActivity  implements LoaderManager.LoaderCallbacks<Function<Object, Object>> {
+abstract class CallbackAppCompatActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Function<Object, Object>> {
 
-    private Map<Integer,  Supplier<Function<Object, Object>>> tasks = new HashMap<Integer,  Supplier<Function<Object, Object>>>();
+    private Map<Integer, Supplier<Function<Object, Object>>> tasks = new HashMap<Integer, Supplier<Function<Object, Object>>>();
 
-    public void call(AppCompatActivity context, Supplier<Function<Object, Object>> task)
-    {
-        ConnectivityManager connMgr = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = null;
-        if (connMgr != null) {
-            networkInfo = connMgr.getActiveNetworkInfo();
-        }
-
-        // If the network is available, connected, and the search field
-        // is not empty, start a BookLoader AsyncTask.
-        if (networkInfo != null && networkInfo.isConnected()) {
-            Log.d("DEBUG", "network ok!");
-            Bundle queryBundle = new Bundle();
-            tasks.put( task.hashCode(),task);
-            context.getSupportLoaderManager().restartLoader(task.hashCode(), queryBundle, this);
-        }
+    public void call(AppCompatActivity context, Supplier<Function<Object, Object>> task) {
+        Bundle queryBundle = new Bundle();
+        tasks.put(task.hashCode(), task);
+        context.getSupportLoaderManager().restartLoader(task.hashCode(), queryBundle, this);
     }
 
     @Override

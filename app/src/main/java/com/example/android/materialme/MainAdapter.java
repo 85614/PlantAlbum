@@ -34,7 +34,7 @@ import java.util.function.Supplier;
 /***
  * The adapter class for the RecyclerView, contains the sports data.
  */
-class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
+class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>  {
 
     // Member variables.
     private ArrayList<Plant> mSportsData;
@@ -46,7 +46,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      * @param sportsData ArrayList containing the sports data.
      * @param context Context of the application.
      */
-    SportsAdapter(CallbackAppCompatActivity context, ArrayList<Plant> sportsData) {
+    MainAdapter(CallbackAppCompatActivity context, ArrayList<Plant> sportsData) {
         this.mSportsData = sportsData;
         this.mContext = context;
     }
@@ -61,7 +61,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      * @return The newly created ViewHolder.
      */
     @Override
-    public SportsAdapter.ViewHolder onCreateViewHolder(
+    public MainAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext).
                 inflate(R.layout.list_item, parent, false));
@@ -74,7 +74,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      * @param position The adapter position.
      */
     @Override
-    public void onBindViewHolder(SportsAdapter.ViewHolder holder,
+    public void onBindViewHolder(MainAdapter.ViewHolder holder,
                                  int position) {
         // Get current sport.
         Plant currentPlant = mSportsData.get(position);
@@ -103,7 +103,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
 
         // Member Variables for the TextViews
         private TextView mTitleText;
-        private TextView mInfoText;
+//        private TextView mInfoText;
         private ImageView mSportsImage;
 
         /**
@@ -116,7 +116,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
 
             // Initialize the views.
             mTitleText = itemView.findViewById(R.id.title);
-            mInfoText = itemView.findViewById(R.id.subTitle);
+//            mInfoText = itemView.findViewById(R.id.subTitle);
             mSportsImage = itemView.findViewById(R.id.sportsImage);
 
             // Set the OnClickListener to the entire view.
@@ -127,12 +127,12 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             if (currentPlant.bitmap !=null) {
                 mSportsImage.setImageBitmap(currentPlant.bitmap);
                 mTitleText.setText(currentPlant.getName());
-                mInfoText.setText(currentPlant.getImageURL());
+//                mInfoText.setText(currentPlant.getImageURL());
                 return;
             }
             // Populate the textviews with data.
             mTitleText.setText(currentPlant.getName());
-            mInfoText.setText(currentPlant.getImageURL());
+//            mInfoText.setText(currentPlant.getImageURL());
 
             // Load the images into the ImageView using the Glide library.
 //            Glide.with(mContext).load(
@@ -145,7 +145,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
                         @Override
                         public Object apply(Object o) {
                             if (currentPlant.bitmap != null) {
-                                SportsAdapter.this.notifyItemChanged(currentPlant.position);
+                                MainAdapter.this.notifyItemChanged(currentPlant.position);
                                 Log.d("DEBUG", "notifyItemChanged(" + currentPlant.position +  ")");
                             }
                             return o;
@@ -163,17 +163,12 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
         @Override
         public void onClick(View view) {
             Plant currentPlant = mSportsData.get(getAdapterPosition());
-            Intent detailIntent = new Intent(mContext, DetailActivity.class);
+            Intent detailIntent = new Intent(mContext, PlantsActivity.class);
             detailIntent.putExtra("title", currentPlant.getName());
             detailIntent.putExtra("image_url", currentPlant.getImageURL());
-            detailIntent.putExtra("image_resource",
-                    currentPlant.getImageResource());
+            detailIntent.putExtra("type", currentPlant.position);
 
-            ActivityOptions options = ActivityOptions
-                    .makeSceneTransitionAnimation((Activity) mContext,
-                            mSportsImage, "switch");
-
-            mContext.startActivity(detailIntent, options.toBundle());
+            mContext.startActivity(detailIntent);
         }
     }
 }

@@ -56,6 +56,7 @@ public class DetailActivity extends CallbackAppCompatActivity {
         // Initialize the views.
         TextView sportsTitle = findViewById(R.id.titleDetail);
         final ImageView sportsImage = findViewById(R.id.sportsImageDetail);
+        final TextView areaView = findViewById(R.id.subTitleDetail);
 
         // Set the text from the Intent extra.
         sportsTitle.setText(getIntent().getStringExtra("title"));
@@ -64,21 +65,24 @@ public class DetailActivity extends CallbackAppCompatActivity {
 //        Glide.with(this).load(getIntent().getIntExtra("image_resource",0))
 //                .into(sportsImage);
 
-        final String queryString =  getIntent().getStringExtra("image_url");
+        final String queryString = getIntent().getStringExtra("image_url");
 
         final Plant currentPlant = Plant.plants.get(queryString);
-        if (currentPlant.bitmap!=null) {
+
+        areaView.setText(currentPlant.getArea());
+        TextView engNameView = findViewById(R.id.newsTitleDetail);
+        engNameView.setText(currentPlant.getEngName());
+        if (currentPlant.bitmap != null) {
             sportsImage.setImageBitmap(currentPlant.bitmap);
-        }
-        else {
+        } else {
             this.call(this, new Supplier<Function<Object, Object>>() {
                 @Override
                 public Function<Object, Object> get() {
                     currentPlant.fetchImage();
-                    return new Function<Object, Object>(){
+                    return new Function<Object, Object>() {
                         @Override
                         public Object apply(Object o) {
-                            if (currentPlant.bitmap!=null){
+                            if (currentPlant.bitmap != null) {
                                 sportsImage.setImageBitmap(currentPlant.bitmap);
                             }
                             return o;

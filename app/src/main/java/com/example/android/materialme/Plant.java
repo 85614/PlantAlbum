@@ -16,10 +16,20 @@
 
 package com.example.android.materialme;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.util.Log;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,23 +40,29 @@ import java.util.Map;
 class Plant {
 
     // Member variables representing the title and information about the sport.
-    private String name;
-    private String imageURL;
-    private final int imageResource;
-
+    final private String name;
+    final private String imageURL;
+    final private String area;
+    final private String engName;
+    Context context;
+    String id;
     int position;
     public Bitmap bitmap;
     public static Map<String, Plant> plants = new HashMap<String, Plant>();
+
     /**
      * Constructor for the Sport data model.
      *
-     * @param name The name if the sport.
+     * @param name     The name if the sport.
      * @param imageURL Information about the sport.
      */
-    public Plant(String name, String imageURL, int imageResource) {
+    public Plant(String name, String imageURL, String engName, String area, Context context, String id) {
         this.name = name;
         this.imageURL = imageURL;
-        this.imageResource = imageResource;
+        this.area = area;
+        this.engName = engName;
+        this.context = context;
+        this.id = id;
         plants.put(imageURL, this);
     }
 
@@ -59,6 +75,14 @@ class Plant {
         return name;
     }
 
+    String getArea() {
+        return area;
+    }
+
+    String getEngName() {
+        return engName;
+    }
+
     /**
      * Gets the info about the sport.
      *
@@ -68,19 +92,73 @@ class Plant {
         return imageURL;
     }
 
-    public int getImageResource() {
-        return imageResource;
-    }
 
-    public void fetchImage()
-    {
-        if (this.bitmap!=null)
+    public void fetchImage() {
+        if (this.bitmap != null)
             return;
+        FileInputStream fileInputStream = null;
         try {
-            URL url = new URL(this.imageURL);
-            this.bitmap = BitmapFactory.decodeStream(url.openStream());
-        } catch (IOException e) {
+            fileInputStream = context.openFileInput(id);
+            this.bitmap = BitmapFactory.decodeStream(fileInputStream);
+            return;
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            if (fileInputStream != null) {
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        ConnectivityManager connMgr = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = null;
+        if (connMgr != null) {
+            networkInfo = connMgr.getActiveNetworkInfo();
+        }
+
+        // If the network is available, connected, and the search field
+        // is not empty, start a BookLoader AsyncTask.
+        if (networkInfo != null && networkInfo.isConnected()) {
+            InputStream is=null;
+            FileOutputStream os=null;
+            try {
+                URL url = new URL(this.imageURL);
+                is = url.openStream();
+                os = context.openFileOutput(id, Context.MODE_PRIVATE);
+                byte[] buf = new byte[1024];
+                int len;
+                while(true){
+                    len = is.read(buf);
+                    Log.d("DEBUG", "len "+len);
+                    if (len > 0){
+                        os.write(buf,0,len);
+                    }else{
+                        break;
+                    }
+                }
+                fetchImage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            finally {
+                if (is!=null) {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(os!=null) {
+                    try {
+                        os.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
         }
     }
 }

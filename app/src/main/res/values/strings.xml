@@ -53,6 +53,575 @@
         <item>Here is some Tennis news!</item>
     </string-array>
 
+    <string name="types">
+        {
+  \"result\": {
+    \"plantList\": [
+      {
+        \"area\": \"江浙一带\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick66611438767173.jpg\",
+        \"engName\": \"Armeniaca mume\",
+        \"name\": \"梅花\",
+        \"plantID\": 388
+      },
+      {
+        \"area\": \"南美各国，中国栽培广泛\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick65321448617401.jpg\",
+        \"engName\": \"Zephyranthes candida （Lindl.）Herb.\",
+        \"name\": \"兰花\",
+        \"plantID\": 119
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick54751439545616.jpg\",
+        \"engName\": \"Florists Dendranthema\",
+        \"name\": \"菊花\",
+        \"plantID\": 428
+      }
+    ],
+    \"totalCount\": 14
+  }
+}
+    </string>
+    <string-array name="plants">
+        <item>
+            {
+  \"statusCode\": \"000000\",
+  \"desc\": \"请求成功\",
+  \"result\": {
+    \"plantList\": [
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick67861439544559.jpg\",
+        \"engName\": \"Euphorbia milii Ch. des Moulins\",
+        \"name\": \"虎刺梅\",
+        \"plantID\": 17
+      },
+      {
+        \"area\": \"全国各地\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick33181448531087.jpg\",
+        \"engName\": \"Herba Androsacis\",
+        \"name\": \"点地梅\",
+        \"plantID\": 62
+      },
+      {
+        \"area\": \"分布于中国大陆以及朝鲜、美洲、日本、欧洲\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick76191440150067.jpg\",
+        \"engName\": \"Chimonanthus praecox （Linn.） Link\",
+        \"name\": \"蜡梅\",
+        \"plantID\": 66
+      },
+      {
+        \"area\": \"中国广西、湖南、湖北、安徽、江西、浙江等省。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick92051444469017.jpg\",
+        \"engName\": \"Hamamelis mollis Oliver\",
+        \"name\": \"金缕梅\",
+        \"plantID\": 101
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick76551450430600.jpg\",
+        \"engName\": \"Potentilla fruticosa\",
+        \"name\": \"金露梅\",
+        \"plantID\": 151
+      },
+      {
+        \"area\": \"中国华北地区、西北地区，苏联、朝鲜、日本、蒙古亦有分布。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick20601443519568.jpg\",
+        \"engName\": \"Sorbaria sorbifolia （L.） A. Br.\",
+        \"name\": \"珍珠梅\",
+        \"plantID\": 165
+      },
+      {
+        \"area\": \"原产于南美洲、西印度，现世界各国广为栽培。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick90221445591728.jpg\",
+        \"engName\": \"Lantana camara\",
+        \"name\": \"五色梅\",
+        \"plantID\": 167
+      },
+      {
+        \"area\": \"中国江苏、浙江、福建、广东等沿江及南方各省\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick66371444642156.jpg\",
+        \"engName\": \"Camellia sasanqua\",
+        \"name\": \"茶梅\",
+        \"plantID\": 356
+      },
+      {
+        \"area\": \"原产墨西哥\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick74301443173509.jpg\",
+        \"engName\": \"Zebrina pendula Schnizl\",
+        \"name\": \"吊竹梅\",
+        \"plantID\": 364
+      },
+      {
+        \"area\": \"江浙一带\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick66611438767173.jpg\",
+        \"engName\": \"Armeniaca mume\",
+        \"name\": \"梅花\",
+        \"plantID\": 388
+      },
+      {
+        \"area\": \"澳洲、新西兰\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick7781449135161.jpg\",
+        \"engName\": \"Leptospermum scoparium\",
+        \"name\": \"松红梅\",
+        \"plantID\": 426
+      },
+      {
+        \"area\": \"中国陕西、四川、江西、湖南、湖北、安徽、江苏等省及日本\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick4511450777112.jpg\",
+        \"engName\": \"Hypericum patulum Thunb.ex Murray\",
+        \"name\": \"金丝梅\",
+        \"plantID\": 522
+      },
+      {
+        \"area\": \"河北、河南、山东、山西、陕西、甘肃、青海、内蒙古等。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick15441452071241.jpg\",
+        \"engName\": \"Sorbaria kirilowii （Regel）Maxim.\",
+        \"name\": \"华北珍珠梅\",
+        \"plantID\": 538
+      },
+      {
+        \"area\": \"原产中国北部，各地几乎都有分布\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick10031442829686.jpg\",
+        \"engName\": \"Amygdalus triloba\",
+        \"name\": \"榆叶梅\",
+        \"plantID\": 583
+      }
+    ],
+    \"totalCount\": 14
+  }
+}
+        </item>
+        <item>
+        {
+  \"statusCode\":\"000000\",
+  \"desc\":\"请求成功\",
+  \"result\":{
+      \"plantList\":[
+          {
+              \"area\":\"西南、华南。原产美洲的沙漠地带\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick37971445246358.jpg\",
+              \"engName\":\"Agave americanavar. Marginata\",
+              \"name\":\"金边龙舌兰\",
+              \"plantID\":1
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick97441452591977.jpg\",
+              \"engName\":\"Renanthera coccinea Lour.\",
+              \"name\":\"火焰兰\",
+              \"plantID\":5
+          },
+          {
+              \"area\":\"原产欧洲南部\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick64291438766891.jpg\",
+              \"engName\":\"Matthiola incana\",
+              \"name\":\"紫罗兰\",
+              \"plantID\":18
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick6521447234735.jpg\",
+              \"engName\":\"Magnolia grandiflora L.\",
+              \"name\":\"荷花玉兰\",
+              \"plantID\":26
+          },
+          {
+              \"area\":\"东南亚\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick7191452763089.jpg\",
+              \"engName\":\"Paphiopedilum hirsutissimum\",
+              \"name\":\"带叶兜兰\",
+              \"plantID\":37
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick88131443519815.jpg\",
+              \"engName\":\"Magnolia liliflora Desr.\",
+              \"name\":\"紫玉兰\",
+              \"plantID\":110
+          },
+          {
+              \"area\":\"南美各国，中国栽培广泛\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick65321448617401.jpg\",
+              \"engName\":\"Zephyranthes candida （Lindl.）Herb.\",
+              \"name\":\"葱兰\",
+              \"plantID\":119
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick23941450172150.jpg\",
+              \"engName\":\"Michelia champaca Linn.\",
+              \"name\":\"黄兰\",
+              \"plantID\":126
+          },
+          {
+              \"area\":\"非洲东部\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick12051451555061.jpg\",
+              \"engName\":\"Saintpaulia ionantha Wendl\",
+              \"name\":\"非洲紫罗兰\",
+              \"plantID\":137
+          },
+          {
+              \"area\":\"中国大陆的广州、杭州、昆明等地\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick50411452244725.jpg\",
+              \"engName\":\"Magnolia soulangeana Soul.-Bod.\",
+              \"name\":\"二乔木兰\",
+              \"plantID\":176
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick75601452677466.jpg\",
+              \"engName\":\"Cymbidium lowianum （Rchb. f.） Rchb. f.\",
+              \"name\":\"碧玉兰\",
+              \"plantID\":178
+          },
+          {
+              \"area\":\"原产于长江流域，伏牛山、庐山、黄山、峨眉山等处有野生\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick81361441791493.jpg\",
+              \"engName\":\"Magnolia\",
+              \"name\":\"玉兰\",
+              \"plantID\":236
+          },
+          {
+              \"area\":\"原产北美东部和东南部。中国长江流域及以南和山东，河南有引种\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick13461444899797.jpg\",
+              \"engName\":\"Yucca gloriosa L\",
+              \"name\":\"凤尾兰\",
+              \"plantID\":239
+          },
+          {
+              \"area\":\"巴西、美国、哥伦比亚、厄瓜多尔及秘鲁等国家\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick57221451983623.jpg\",
+              \"engName\":\"Dancing－Doll Orchid\",
+              \"name\":\"文心兰\",
+              \"plantID\":259
+          },
+          {
+              \"area\":\"广西西南部、四川西南部、贵州西南部、云南和西藏东南部\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick85241440496118.jpg\",
+              \"engName\":\"Cymbidium\",
+              \"name\":\"大花蕙兰\",
+              \"plantID\":261
+          },
+          {
+              \"area\":\"原产热带美洲\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick33941452156679.jpg\",
+              \"engName\":\"Cattleya Hybrida\",
+              \"name\":\"卡特兰\",
+              \"plantID\":276
+          },
+          {
+              \"area\":\"非洲南部好望角\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick54011451382522.jpg\",
+              \"engName\":\"Freesia\",
+              \"name\":\"小苍兰\",
+              \"plantID\":286
+          },
+          {
+              \"area\":\"非洲南部，美国，德国，意大利，荷兰，菲律宾，中国\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick23051440409379.jpg\",
+              \"engName\":\"Strelitzia reginae Aiton\",
+              \"name\":\"鹤望兰\",
+              \"plantID\":291
+          },
+          {
+              \"area\":\"原产于我国中部，现在各省均有栽培\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick43961441533674.jpg\",
+              \"engName\":\"magnolia\",
+              \"name\":\"木兰花\",
+              \"plantID\":312
+          },
+          {
+              \"area\":\"中国、日本、朝鲜半岛南端等\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick36641442223694.jpg\",
+              \"engName\":\"Cymbidium goeringii （Rchb. f.） Rchb. f.\",
+              \"name\":\"春兰\",
+              \"plantID\":320
+          },
+          {
+              \"area\":\"北美\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick32821440064459.jpg\",
+              \"engName\":\"New York Aster\",
+              \"name\":\"荷兰菊\",
+              \"plantID\":323
+          },
+          {
+              \"area\":\"原产非洲南部，在世界各地广为栽培。\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick62441443000755.jpg\",
+              \"engName\":\"string－of－pearls\",
+              \"name\":\"珍珠吊兰\",
+              \"plantID\":329
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick11801442224359.jpg\",
+              \"engName\":\"Convallaria majalis Linn.\",
+              \"name\":\"铃兰\",
+              \"plantID\":330
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick27111451295168.jpg\",
+              \"engName\":\"Neofinetia falcata （Thunb. ex A. Murray） H. H. Hu\",
+              \"name\":\"风兰\",
+              \"plantID\":381
+          },
+          {
+              \"area\":\"原产热带、亚洲。中国台湾、广东、福建等省有野生\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick15451451467914.jpg\",
+              \"engName\":\"Crinum asiaticum L. var. sinicum （Roxb. ex Herb.） \",
+              \"name\":\"文殊兰\",
+              \"plantID\":391
+          },
+          {
+              \"area\":\"印度、马来西亚、菲律宾、中国南方以及澳大利亚北方\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick4441448444051.jpg\",
+              \"engName\":\"Vanda\",
+              \"name\":\"万代兰\",
+              \"plantID\":399
+          },
+          {
+              \"area\":\"墨西哥\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick33841444468734.jpg\",
+              \"engName\":\"Beaucarnea recurvata Lem.\",
+              \"name\":\"酒瓶兰\",
+              \"plantID\":403
+          },
+          {
+              \"area\":\"非洲及亚洲南部，中国各地有栽培\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick29661442482550.jpg\",
+              \"engName\":\"Sansevieria trifasciata Prain\",
+              \"name\":\"虎尾兰\",
+              \"plantID\":407
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick24831441098711.jpg\",
+              \"engName\":\"Phalaenopsis\",
+              \"name\":\"蝴蝶兰\",
+              \"plantID\":431
+          },
+          {
+              \"area\":\"\",
+              \"coverURL\":\"http://img.boqiicdn.com/Data/BK/P/imagick34441444469318.jpg\",
+              \"engName\":\"Hoya carnosa （L. f.） R. Br.\",
+              \"name\":\"球兰\",
+              \"plantID\":436
+          }
+      ],
+      \"totalCount\":44
+  }
+}
+        </item>
+        <item>
+            {
+  \"statusCode\": \"000000\",
+  \"desc\": \"请求成功\",
+  \"result\": {
+    \"plantList\": [
+      {
+        \"area\": \"大部分地区\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick14601451898319.jpg\",
+        \"engName\": \"Haworthia，cymbiformis，fvariegata\",
+        \"name\": \"凝脂菊\",
+        \"plantID\": 15
+      },
+      {
+        \"area\": \"原产地位于南非及美国部分沿海地区\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick86391450429419.jpg\",
+        \"engName\": \"Oscularia pedunculata\",
+        \"name\": \"白凤菊\",
+        \"plantID\": 27
+      },
+      {
+        \"area\": \"原产美国东部地区，我国客地庭园常见栽培，供观赏\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick90701447235657.jpg\",
+        \"engName\": \"Rudbeckia hirta L.\",
+        \"name\": \"黑心菊\",
+        \"plantID\": 33
+      },
+      {
+        \"area\": \"加拿大及美国\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick6651448444908.jpg\",
+        \"engName\": \"Rudbeckia laciniata L.\",
+        \"name\": \"金光菊\",
+        \"plantID\": 40
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick55991449740748.jpg\",
+        \"engName\": \"Spiraea japonica L. f.\",
+        \"name\": \"粉花绣线菊\",
+        \"plantID\": 102
+      },
+      {
+        \"area\": \"原产美国南部\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick58161445591297.jpg\",
+        \"engName\": \"Coreopsis\",
+        \"name\": \"金鸡菊\",
+        \"plantID\": 114
+      },
+      {
+        \"area\": \"德国的山坡、田野、水畔、路边、房前屋后到处都有它的踪迹。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick70311441619512.jpg\",
+        \"engName\": \"Centaurea cyanus L.\",
+        \"name\": \"矢车菊\",
+        \"plantID\": 124
+      },
+      {
+        \"area\": \"原产于澳大利亚，在东南亚和欧美栽培较广\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick76241448961739.jpg\",
+        \"engName\": \"Helichrysum bracteatum\",
+        \"name\": \"蜡菊\",
+        \"plantID\": 143
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick17501448445669.jpg\",
+        \"engName\": \"pot marigold\",
+        \"name\": \"金盏菊\",
+        \"plantID\": 150
+      },
+      {
+        \"area\": \"原产于墨西哥\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick55151448876793.jpg\",
+        \"engName\": \"Cosmos sulphureus\",
+        \"name\": \"硫华菊\",
+        \"plantID\": 182
+      },
+      {
+        \"area\": \"原产大西洋加那利群岛，中国各地公园或庭院广泛栽培。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick80281450344632.jpg\",
+        \"engName\": \"Florists Cineraria\",
+        \"name\": \"瓜叶菊\",
+        \"plantID\": 197
+      },
+      {
+        \"area\": \"原产北美，中国中、南部广为栽培\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick70211446543088.jpg\",
+        \"engName\": \"Gaillardia Pulchella Foug.\",
+        \"name\": \"天人菊\",
+        \"plantID\": 224
+      },
+      {
+        \"area\": \"主产地南非，我国分布在华南、华东、华中等地区\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick73001447322923.jpg\",
+        \"engName\": \"Gerbera jamesonii Bolus\",
+        \"name\": \"非洲菊\",
+        \"plantID\": 226
+      },
+      {
+        \"area\": \"原产于南非和莫桑比克\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick52011451984995.jpg\",
+        \"engName\": \"Gazania rigens\",
+        \"name\": \"勋章菊\",
+        \"plantID\": 228
+      },
+      {
+        \"area\": \"原产南非\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick99851447148491.jpg\",
+        \"engName\": \"Arctotis stoechadifoli var.grandis\",
+        \"name\": \"蓝目菊\",
+        \"plantID\": 244
+      },
+      {
+        \"area\": \"原产于：北非、西班牙\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick91851446717339.jpg\",
+        \"engName\": \"Chrysanthemum paludosum\",
+        \"name\": \"白晶菊\",
+        \"plantID\": 245
+      },
+      {
+        \"area\": \"原产欧洲和地中海区域，现世界各地均有栽培\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick21551443002548.jpg\",
+        \"engName\": \"Bellis perennis\",
+        \"name\": \"雏菊\",
+        \"plantID\": 251
+      },
+      {
+        \"area\": \"中国、日本、朝鲜\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick80081451554515.jpg\",
+        \"engName\": \"Callistephus chinensis （L.） Nees\",
+        \"name\": \"翠菊\",
+        \"plantID\": 299
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick26381449480364.jpg\",
+        \"engName\": \"Leucanthemum maximum （Ramood） DC.\",
+        \"name\": \"大滨菊\",
+        \"plantID\": 321
+      },
+      {
+        \"area\": \"北美\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick32821440064459.jpg\",
+        \"engName\": \"New York Aster\",
+        \"name\": \"荷兰菊\",
+        \"plantID\": 323
+      },
+      {
+        \"area\": \"原产墨西哥，中国各地有栽培。在广东和云南南部、东南部已归化\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick53261448271956.jpg\",
+        \"engName\": \"Marigold\",
+        \"name\": \"万寿菊\",
+        \"plantID\": 324
+      },
+      {
+        \"area\": \"世界各地\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick52141428056523.jpg\",
+        \"engName\": \"Bellis perennis Linn.\",
+        \"name\": \"邹菊\",
+        \"plantID\": 378
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick54751439545616.jpg\",
+        \"engName\": \"Florists Dendranthema\",
+        \"name\": \"菊花\",
+        \"plantID\": 428
+      },
+      {
+        \"area\": \"\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick45131447925692.jpg\",
+        \"engName\": \"Coreopsis grandiflora Hogg.\",
+        \"name\": \"大花金鸡菊\",
+        \"plantID\": 516
+      },
+      {
+        \"area\": \"分布在北美，世界各地多有栽培\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick50071451899162.jpg\",
+        \"engName\": \"Echinacea purpurea（Linn.） Moench\",
+        \"name\": \"松果菊\",
+        \"plantID\": 543
+      },
+      {
+        \"area\": \"中国、日本\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick93971448877187.jpg\",
+        \"engName\": \"Spiraea cantoniensis Lour.\",
+        \"name\": \"麻叶绣线菊\",
+        \"plantID\": 584
+      },
+      {
+        \"area\": \"原产地美国，北京1990年4月从美国引种。现中国各地均产。\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick31771447840409.jpg\",
+        \"engName\": \"Spiraea x bumalda cv.Gold Flame\",
+        \"name\": \"金焰绣线菊\",
+        \"plantID\": 593
+      },
+      {
+        \"area\": \"欧洲大陆、中国甘肃、新疆及西藏等地\",
+        \"coverURL\": \"http://img.boqiicdn.com/Data/BK/P/imagick64101447667538.jpg\",
+        \"engName\": \"Camomile\",
+        \"name\": \"甘菊\",
+        \"plantID\": 605
+      }
+    ],
+    \"totalCount\": 28
+  }
+}
+        </item>
+    </string-array>
 
   
 
